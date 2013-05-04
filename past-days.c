@@ -24,12 +24,13 @@ int main() {
   ys = span / 10000;  ms = span % 10000 / 100;  ds = span % 100;
 
   int i;
-  for(i = y + 1; i < ys; i++)
+  for(i = y; i < ys; i++)
     pastDays += 365 + isEvenYear(y);
-  for(i = m ; i < 13; i++)
-    pastDays += daysOfMonth(i);
+  for(i = 1 ; i < m; i++)
+    pastDays -= daysOfMonth(i);
   for(i = 1; i < ms; i++)
     pastDays += daysOfMonth(i);
+  pastDays += (m>=2 && isEvenYear(y)) + (ms>2 && isEvenYear(ys));
   pastDays = pastDays - d + ds;
 
   printf("\ndays past: %d\n\thappy hacking\n\thappy lifing\n", pastDays);
