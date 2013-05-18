@@ -34,6 +34,5 @@ int main() {
   pastDays = pastDays - d + ds;
 
   printf("\ndays past: %d\n\thappy hacking\n\thappy lifing\n", pastDays);
-  scanf("%d", &i);
   return 0;
 }
