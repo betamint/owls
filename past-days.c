@@ -25,7 +25,7 @@ int main() {
 
   int i;
   for(i = y; i < ys; i++)
-    pastDays += 365 + isEvenYear(y);
+    pastDays += 365 + isEvenYear(i);
   for(i = 1 ; i < m; i++)
     pastDays -= daysOfMonth(i);
   for(i = 1; i < ms; i++)
