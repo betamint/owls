@@ -1,4 +1,4 @@
-cowsay = function (thought) {
+var cowsay = function (thought) {
     var scale = 40;
 
     var len = thought.length;
