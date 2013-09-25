@@ -1,7 +1,7 @@
-isEvenYear = function (y) {
+var isEvenYear = function (y) {
 	return (y % 400 == 0) || ((y % 4 == 0) && (y % 25 != 0));
-}
-daysOfMonth = function (m) {
+};
+var daysOfMonth = function (m) {
 	switch (m) {
 		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
 			return 31;
@@ -10,8 +10,8 @@ daysOfMonth = function (m) {
 		case 2:
 			return 28;
 	}
-}
-pastDays = function (birth, end) {
+};
+var pastDays = function (birth, end) {
 	var birth, y, m, d;
 	var span, ys, ms, ds;
 	var days = 0;
@@ -37,4 +37,4 @@ pastDays = function (birth, end) {
 	days = days - d + ds;
 	
 	return days;
-}
+};
